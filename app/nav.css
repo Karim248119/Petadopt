@@ -1,0 +1,64 @@
+.nav2 li:hover {
+    background-color:  white;
+    color:white;
+    transition: 0.3s all;
+}
+
+.nav2 li::before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    left: 5px;
+    top: 5px;
+    transform-origin: left;
+    border: solid 3px  white;
+    border-width: 3px 0 0 3px;
+    opacity: 0;
+    transition: 0.3s all;
+}
+.nav2 li:hover{
+   color: black;
+}
+.nav2 li:hover:before {
+    left: -8px;
+    top: -8px;
+    opacity: 1;
+}
+
+.nav2 li::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    bottom: 5px;
+    right: 5px;
+    transform-origin: right bottom;
+    border: solid 3px  white;
+    border-width: 0 3px 3px 0;
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.nav2 li:hover:after {
+    bottom: -8px;
+    right: -8px;
+    opacity: 1;
+
+}
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+
+li {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 5px;
+}

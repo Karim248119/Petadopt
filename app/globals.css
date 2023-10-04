@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@font-face {
+  font-family: myfont;
+  src: url('./fonts/ConcertOne-Regular.ttf');
+}
+@font-face {
+  font-family: headfont;
+  src: url('./fonts/Dongle-Bold.ttf');
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  box-sizing: border-box;
+font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+.text-bvp {
+  background: rgb(238, 0, 217);
+    background: linear-gradient(45deg, rgba(238, 0, 217, 1) 0%, rgba(17, 180, 237, 1) 35%, rgba(180, 0, 250, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-bvp {
+  background: rgb(238, 0, 217);
+    background: linear-gradient(45deg, rgba(238, 0, 217, 1) 0%, rgba(17, 180, 237, 1) 35%, rgba(180, 0, 250, 1) 100%)
+}
+.bg-grad{
+  background: rgb(238, 0, 217);
+    background: linear-gradient(45deg, rgba(238, 0, 217, 0.1764245535913016) 0%, rgba(17, 180, 237, 0.21061258777933578) 35%, rgba(180, 0, 250, 0.14223651940326743) 100%);
+}
+
+.pink{
+  background-color: rgb(238, 0, 217);
+}
+.blue{
+  background-color: rgba(17, 180, 237, 1);
+}
+.purple{
+  background-color: rgba(180, 0, 250, 1);
+}
+
+.shadow{
+box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.pink-hv:hover {
+  color: rgb(238, 0, 217);
+  cursor: pointer;
+}
+
+.blue-hv:hover {
+  color: rgba(17, 180, 237, 1);
+  cursor: pointer;
+}
+
+.purple-hv:hover {
+  color: rgba(180, 0, 250, 1);
+  cursor: pointer;
+}
+
+.bvp-hv:hover {
+  background: rgb(238, 0, 217);
+  background: linear-gradient(45deg, rgba(238, 0, 217, 1) 0%, rgba(17, 180, 237, 1) 35%, rgba(180, 0, 250, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h6 {
+  font-family: headfont;
+  font-weight: normal;
+}
+h1{
+  font-family:headfont ; 
+}
