@@ -1,0 +1,173 @@
+.card4 {
+  width: 300px;
+  height: 350px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: relative;
+  background: white;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card10 {
+  margin-top: 120px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+  justify-content: space-around;
+}
+
+/* .card4 h2 {
+  background: rgb(238, 0, 217);
+    background: linear-gradient(45deg, rgba(238, 0, 217, 1) 0%, rgba(17, 180, 237, 1) 35%, rgba(180, 0, 250, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  font-size: 20px;
+  font-weight: bold;
+}
+ */
+
+.card4 span {
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.module2 {
+  background: rgb(238, 0, 217);
+  background: linear-gradient(
+    45deg,
+    rgba(238, 0, 217, 1) 0%,
+    rgba(17, 180, 237, 1) 35%,
+    rgba(180, 0, 250, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
+
+.card10 button {
+  width: 80px;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* .module-border-wrap:hover .span {
+    background-color: transparent;
+    transition: 1s ease;
+} */
+
+/* .module-border-wrap:hover .module2 {
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s ease;
+} */
+
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s all;
+}
+
+.img-wrapper h1 {
+  color: white;
+  font-size: 100px;
+}
+
+.card4:hover .img-wrapper {
+  height: 50%;
+  width: 90%;
+  transform: translate(-50%, -95%);
+  border-radius: 10px;
+  padding: 3px;
+  background: rgb(238, 0, 217);
+  background: linear-gradient(
+    45deg,
+    rgba(238, 0, 217, 1) 0%,
+    rgba(17, 180, 237, 1) 35%,
+    rgba(180, 0, 250, 1) 100%
+  );
+}
+
+.card4:hover .img-wrapper h1 {
+  font-size: 35px;
+}
+
+.card4:hover img {
+  border-radius: 10px;
+}
+
+.card4:hover .img-wrapper span {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card4:hover .module1 {
+  background: rgb(238, 0, 217);
+  background: linear-gradient(
+    45deg,
+    rgba(238, 0, 217, 1) 0%,
+    rgba(17, 180, 237, 1) 35%,
+    rgba(180, 0, 250, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card10 button {
+  color: white;
+  padding: 5px;
+}
+.card4 img {
+  z-index: 5;
+}
+
+.btn {
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  background: rgb(238, 0, 217);
+  background: linear-gradient(
+    45deg,
+    rgba(238, 0, 217, 1) 0%,
+    rgba(17, 180, 237, 1) 35%,
+    rgba(180, 0, 250, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.btn:hover:before {
+  transform: translateX(0);
+  transition: 0.5s ease;
+}

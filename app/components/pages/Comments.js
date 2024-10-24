@@ -1,29 +1,32 @@
-"use client"
-import React from 'react'
+"use client";
+import React, { useState } from "react";
 import { Carousel } from "@material-tailwind/react";
-import { Datacomments } from '@/app/data/Data'
-import CarouselCustomNavigation from './Slider'
-export default function Comments ()
-{
-    return (
-        <div className="h-[500px]  w-full" id='reviews'>
-            <div className=" h-[500px] w-1/5 absolute left-0 bg-black"></div>
-            <Carousel
-                className=" h-[400px] w-[1200px] absolute left-24 mt-[80px]  overflow-hidden"
-                navigation={ Number }
-                autoplay={ true }
-                autoplayDelay={ 2000 }
-                loop={ true }
-                prevArrow={ false }
-                nextArrow={ false }
-            >
-                { Datacomments.map( comment => (
-                    <CarouselCustomNavigation comment={ comment } />
-                ) ) }
-
-            </Carousel>
-
-        </div>
-
-    )
+import { Datacomments } from "@/app/data/Data";
+import CarouselCustomNavigation from "./Slider";
+export default function Comments() {
+  const [play, setPlay] = useState(true);
+  return (
+    <div className="min-h-[500px] w-full mb-40" id="reviews">
+      <div className=" md:h-[500px] md:w-1/5 absolute left-0 bg-black"></div>
+      <Carousel
+        className=" md:h-[400px] md:w-[1200px] absolute md:left-24 left-0 mt-[80px]  overflow-hidden"
+        navigation={Number}
+        autoplay={play}
+        autoplayDelay={2000}
+        loop={play}
+        prevArrow={false}
+        nextArrow={false}
+        onMouseEnter={() => {
+          setPlay(false);
+        }}
+        onMouseLeave={() => {
+          setPlay(true);
+        }}
+      >
+        {Datacomments.map((comment) => (
+          <CarouselCustomNavigation key={comment.id} comment={comment} />
+        ))}
+      </Carousel>
+    </div>
+  );
 }
